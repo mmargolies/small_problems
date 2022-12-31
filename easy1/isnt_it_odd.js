@@ -10,7 +10,7 @@
 // variables declared with let
 // comparisons
 
-// algorithm: 
+// algorithm:
 // if num is negative, make it positive
 // perform % 2 operation on input
 // if this expression is strictly equal to 1, return it
