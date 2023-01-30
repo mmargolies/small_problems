@@ -4,7 +4,7 @@ otherwise. Note that we are looking for a boolean result instead of a truthy
 falsy value as returned by || and &&.
 */
 
-function xor(arg1, arg2) {
+function xorThree(arg1, arg2) {
   arg1 = Number(!!arg1);
   arg2 = Number(!!arg2);
 
@@ -25,3 +25,14 @@ function xorTwo(arg1, arg2) {
 
   return false;
 }
+
+// Also works:
+
+function xor(arg1, arg2) {
+  return (arg1 && !arg2) || (!arg1 && arg2);
+}
+
+console.log(xor(5, 0));          // true
+console.log(xor(false, true));   // true
+console.log(xor(1, 1));         // true
+console.log(xor(true, true));   // true
