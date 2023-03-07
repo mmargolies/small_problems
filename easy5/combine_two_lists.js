@@ -11,5 +11,12 @@ function interleave(arr1, arr2) {
   }).flat();
 }
 
-console.log(interleave([1, 2, 3], ['a', 'b', 'c']));
+// with reduce:
+function interleaveReduce(arr1, arr2) {
+  return arr1.reduce((acc, curr, idx) => {
+    return acc.concat(curr, arr2[idx]);
+  }, []);
+}
+
+console.log(interleaveReduce([1, 2, 3], ['a', 'b', 'c']));
 // [1, "a", 2, "b", 3, "c"]
