@@ -113,11 +113,14 @@ function minilang(program) {
   return undefined;
 }
 
+minilang('4.5 PUSH ADD PRINT');
+// should print invalid token error
+
 minilang('ADD PRINT');
 // should print empty stack error
 
 minilang('5 HELLO');
-// should print invalid command error
+// should print invalid token error
 
 minilang('4 PUSH 5 MULT PRINT POP ADD');
 // should print 20, then empty stack error
